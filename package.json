@@ -6,8 +6,13 @@
   "repository": "https://github.com/gregoryvicent/dear-blog.git",
   "author": "Gregory Vicent <gregory.work14@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
