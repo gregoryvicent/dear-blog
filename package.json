@@ -1,0 +1,16 @@
+{
+  "name": "dear-blog",
+  "version": "0.0.1",
+  "description": "A small and beautiful blog",
+  "main": "app.js",
+  "repository": "https://github.com/gregoryvicent/dear-blog.git",
+  "author": "Gregory Vicent <gregory.work14@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
