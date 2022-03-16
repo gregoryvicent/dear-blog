@@ -1,5 +1,43 @@
 extends ../layout/layout
 
+mixin post()
+  div.post
+
 block content 
-  h1= message
-  p All this is a big text, maybe.
+  section
+    h1= message
+    i
+      p.text-small Welcome to my Dear Blog...
+
+  section
+    div(class=["container-textImage", "container-textImage--right"])
+      div
+        h2 Hi, my name is Mia Olivera
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, tempora? Magnam, consequatur rem! Eaque dignissimos aut nemo maxime consectetur reprehenderit. Adipisci, vero saepe voluptas molestias nisi accusantium eius excepturi culpa praesentium obcaecati ad at fuga qui. Recusandae, ut. Commodi, repudiandae! Sed commodi cum provident deserunt repellat ex maxime iste consectetur!
+      figure 
+        img(src="assets/img/mia-photo-1.jpg" alt="Mia Olivera")
+
+    div(class=["container-textImage", "container-textImage--left"])
+      figure 
+        img(src="assets/img/mia-photo-2.jpg" alt="Mia Olivera")
+      div
+        h2 My life is...
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, inventore corporis. Dignissimos fuga dolorem voluptate consequuntur quo sint cupiditate. Excepturi harum reprehenderit totam quaerat ad aut consequuntur amet ipsum? Eos vitae ullam dolore, asperiores tempora rem ea quaerat maxime, exercitationem eligendi odio deserunt pariatur veniam incidunt quod dignissimos quae maiores. Incidunt nemo odio quam ab suscipit, deserunt quidem, dolor commodi sunt expedita temporibus molestiae dolores?
+
+    div(class=["container-textImage", "container-textImage--right"])
+      div
+        h2 I love my job 
+        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore consectetur quae placeat, deserunt libero adipisci nostrum! Odit, explicabo consequuntur? Inventore, rerum ipsum eius neque dolorum eum tenetur, exercitationem praesentium commodi obcaecati, ipsam et asperiores doloremque.   
+      figure 
+        img(src="assets/img/mia-photo-3.jpg" alt="Mia Olivera")
+
+  section 
+    h2.text-center I write too!!!
+    div.grid
+      +post
+      +post
+      +post
+      +post
+      +post
+      +post
+      +post

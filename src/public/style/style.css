@@ -15,12 +15,27 @@
 body {
   display: grid;
   grid-template-columns: 30% 70%;
+  column-gap:25px;
   font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
 }
 
 footer {
   background-color: aqua;
   grid-column-start: 2;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-family);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 header {
@@ -31,8 +46,55 @@ header {
 }
 
 main {
-  background-color: blue;
   grid-column-start: 2;
+  padding: 3rem;
+}
+
+p {
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+section {
+  margin-bottom: 6rem;
+}
+
+/* Custom */
+
+.container-textImage {
+  display: grid;
+  margin: 4rem 0;
+}
+
+.container-textImage--right {
+  grid-template-columns: 70% 30%;
+}
+
+.container-textImage--left {
+  grid-template-columns: 30% 70%;
+}
+
+.container-textImage img {
+  width: 100%;
+}
+
+.container-textImage figure {
+  margin: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  flex-flow: row;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-small {
+  font-size: 1rem;
 }
 
 /* Header */
@@ -79,9 +141,6 @@ main {
   height: 53%;
 }
 
-.Header-list {
-}
-
 .Header-item {
   font-family: var(--font-family);
   text-align: center;
@@ -97,4 +156,12 @@ main {
 
 .Header-link:hover {
   font-size: 3rem;
+}
+
+/* Post */
+
+.post {
+  background-color: purple;
+  width: 250px;
+  height: 250px;
 }
