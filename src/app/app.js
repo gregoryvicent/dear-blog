@@ -14,6 +14,20 @@ app
 app
   .use(morgan("dev"))
   .use(express.static(statics))
-  .use("/", router)
+  .use(router)
+
+// Middleware to page 404
+// app.use((err, req, res, next) => {
+//     console.error("----------------------------------------------------------------------------------------------------")
+//     console.error(err.stack)
+//     res.status(404).send("This is an ERROR!!!")
+//     next()
+//   })
+
+// Testing route to page 404 not found
+// app.get("/", (req, res) => {
+//   res.send("This is a response")
+//   res.end()
+// })
 
 module.exports = app

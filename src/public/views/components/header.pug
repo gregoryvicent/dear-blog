@@ -1,2 +1,16 @@
 header
-  h2 I am SideBar
+  div.Header-perfileContainer
+    h3.Header-title Dear Blog
+    figure.Header-boxPhoto
+      img(src="assets/img/mia-photo.jpg", alt="Mia's perfil photo", class="Header-perfilPhoto")
+      i
+        figcaption.Header-name Mia Olivera
+  nav.Header-nav 
+    ul.Header-list
+      li.Header-item 
+        a(href="/", class="Header-link") Home
+      li.Header-item 
+        a(href="/blog", class="Header-link") Blog
+      li.Header-item 
+        a(href="/contact", class="Header-link") Contact
+    
