@@ -12,6 +12,16 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: var(--two-color);
+  transition: all .5s ease;
+}
+
+a:hover {
+  color: #4b4b4b;
+}
+
 body {
   display: grid;
   grid-template-columns: 30% 70%;
@@ -36,6 +46,10 @@ h1 {
 h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 header {
@@ -83,14 +97,25 @@ section {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  flex-flow: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.negative-box {
+  background-color: var(--two-color);
+}
+
+.negative-text {
+  color: var(--main-color)
 }
 
 .text-center {
   text-align: center;
+}
+
+.text-decoration {
+  text-decoration: underline;
 }
 
 .text-small {
@@ -161,7 +186,80 @@ section {
 /* Post */
 
 .post {
-  background-color: purple;
   width: 250px;
+  min-width: 250px;
   height: 250px;
+  margin: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-Description {
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--main-color);
+  transition: all .5s linear;
+}
+
+.post-Description--active {
+  opacity: 1;
+}
+
+.post-BoxImg {
+  width: 100%;
+  height: 100%;
+}
+
+.post-Img {
+  width: 100%;
+  height: 100%;
+}
+
+.post-Title {
+  width: 100%;
+  background-color: var(--two-color);
+  color: var(--main-color);
+  font-family: var(--font-family);
+  padding: 1rem;
+  position: relative;
+}
+
+/* Contact Section */
+
+.contact-container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 1rem
+}
+
+.contact-img {
+  width: 80%;
+  transition: all .5s ease;
+}
+
+.contact-img:hover {
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+
+.contact-text {
+  text-align: center;
+  align-self: center;
+}
+
+/* Footer */
+
+.Footer {
+  background-color: var(--two-color);
+  width: 90%;
+  margin: auto;
+  color: var(--main-color);
+  padding: 1rem;
 }

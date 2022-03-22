@@ -1,7 +1,12 @@
 extends ../layout/layout
 
-mixin post()
-  div.post
+mixin post(address_img, title)
+  a(href="#")
+    div.post
+      p.post-Description This is a large description... Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur esse est odit pariatur explicabo dolorum quibusdam. Mollitia exercitationem odio provident?
+      figure.post-BoxImg 
+        img(src=`assets/img/posts/${address_img}`, alt= title, class="post-Img")
+      h3.post-Title #{title}
 
 block content 
   section
@@ -34,10 +39,19 @@ block content
   section 
     h2.text-center I write too!!!
     div.grid
-      +post
-      +post
-      +post
-      +post
-      +post
-      +post
-      +post
+      +post("post1.jpeg", "This is a title")
+      +post("post2.jpg", "This is a title")
+      +post("post3.jpg", "This is a title")
+    a(href="/blog", class=["text-small", "text-decoration"]) More Posts ->
+
+  section 
+    div(class=["contact-container", "negative-box"])
+      div
+        h2(class=["negative-text", "text-center"]).negative-text Contact Me
+        p(class=["negative-text", "contact-text"]) Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quod, consequuntur repellendus expedita, illum debitis minima, adipisci odio accusantium at obcaecati saepe unde dolore! Nobis voluptatem facilis, autem odio vel obcaecati nostrum recusandae veritatis magni inventore accusantium, distinctio eius tenetur.
+      div
+        a(href="/contact")
+          img(src="assets/img/flechas.svg", alt="flechas", class="contact-img")
+
+block scripts
+  script(src="js/posts.js") 
