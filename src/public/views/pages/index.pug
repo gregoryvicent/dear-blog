@@ -1,16 +1,18 @@
 extends ../layout/layout
 
-mixin post(address_img, title)
+mixin post(img, postTitle, description, date)
   a(href="#")
     div.post
-      p.post-Description This is a large description... Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur esse est odit pariatur explicabo dolorum quibusdam. Mollitia exercitationem odio provident?
+      p.post-Description #{description}
       figure.post-BoxImg 
-        img(src=`assets/img/posts/${address_img}`, alt= title, class="post-Img")
-      h3.post-Title #{title}
+        img(src=`assets/img/posts/${img}`, alt= postTitle, class="post-Img")
+      div(class=["negative-box", "post-boxTitle"])
+        h3.post-Title #{postTitle}
+        p(class=["negative-text", "text-small"]) #{date}
 
 block content 
   section
-    h1= message
+    h1= title
     i
       p.text-small Welcome to my Dear Blog...
 
@@ -39,9 +41,14 @@ block content
   section 
     h2.text-center I write too!!!
     div.grid
-      +post("post1.jpeg", "This is a title")
-      +post("post2.jpg", "This is a title")
-      +post("post3.jpg", "This is a title")
+      each post, index in posts
+        if index < 3
+          +post(
+            post.data.img,
+            post.data.title,
+            post.data.description,
+            post.data.date.toLocaleDateString()
+            )
     a(href="/blog", class=["text-small", "text-decoration"]) More Posts ->
 
   section 

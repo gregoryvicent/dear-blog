@@ -1,4 +1,29 @@
 extends ../layout/layout
 
+mixin post(img, postTitle, description, date)
+  a(href="#")
+    div.post
+      p.post-Description #{description}
+      figure.post-BoxImg 
+        img(src=`assets/img/posts/${img}`, alt= postTitle, class="post-Img")
+      div(class=["negative-box", "post-boxTitle"])
+        h3.post-Title #{postTitle}
+        p(class=["negative-text", "text-small"]) #{date}
+
 block content 
-  h1= message
+  section
+    h1= title
+    p.text-small You will surely find something interesting here.
+
+  section 
+    div.grid
+      each post in posts 
+        +post(
+          post.data.img, 
+          post.data.title, 
+          post.data.description,
+          post.data.date.toLocaleDateString()
+          )
+  
+block scripts
+  script(src="js/posts.js") 

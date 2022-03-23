@@ -2,7 +2,7 @@ const express = require("express")
 const morgan = require("morgan")
 const pug = require("pug")
 
-const router = require("../router/router")
+const router = require("./router/router")
 
 const app = express()
 const statics = __dirname.replace("app", "public")
