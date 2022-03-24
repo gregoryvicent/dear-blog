@@ -11,10 +11,11 @@ class GetPosts {
   }
 
   #dataPosts() {
-    this.#posts.forEach((post) => {
+    this.#posts.forEach((post, index) => {
       const data = fs.readFileSync(`${this.#pathDirPosts}/${post}`, {encoding: "utf8"})    
 
       this.#postObject.push(matter(data))
+      this.#postObject[index].file = post.replace(".md", "")
     })
 
     this.#postObject.sort((a, b) => b.data.date - a.data.date)

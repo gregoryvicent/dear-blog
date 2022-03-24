@@ -1,7 +1,7 @@
 extends ../layout/layout
 
-mixin post(img, postTitle, description, date)
-  a(href="#")
+mixin post(img, postTitle, description, date, link)
+  a(href=`/posts/${link}`)
     div.post
       p.post-Description #{description}
       figure.post-BoxImg 
@@ -47,7 +47,8 @@ block content
             post.data.img,
             post.data.title,
             post.data.description,
-            post.data.date.toLocaleDateString()
+            post.data.date.toLocaleDateString(),
+            post.file
             )
     a(href="/blog", class=["text-small", "text-decoration"]) More Posts ->
 

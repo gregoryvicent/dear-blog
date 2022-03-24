@@ -6,3 +6,9 @@ description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ani
 ---
 
 # This is Spartaaaaa!!!!
+
+This is a large text about a post example and I do not know that more put here...
+
+## This is a subtitle
+
+Other text in *italica*
