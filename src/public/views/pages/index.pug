@@ -18,24 +18,24 @@ block content
 
   section
     div(class=["container-textImage", "container-textImage--right"])
-      div
+      div.container-info
         h2 Hi, my name is Mia Olivera
         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, tempora? Magnam, consequatur rem! Eaque dignissimos aut nemo maxime consectetur reprehenderit. Adipisci, vero saepe voluptas molestias nisi accusantium eius excepturi culpa praesentium obcaecati ad at fuga qui. Recusandae, ut. Commodi, repudiandae! Sed commodi cum provident deserunt repellat ex maxime iste consectetur!
-      figure 
+      figure.container-img
         img(src="assets/img/mia-photo-1.jpg" alt="Mia Olivera")
 
     div(class=["container-textImage", "container-textImage--left"])
-      figure 
+      figure.container-img 
         img(src="assets/img/mia-photo-2.jpg" alt="Mia Olivera")
-      div
+      div.container-info
         h2 My life is...
         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, inventore corporis. Dignissimos fuga dolorem voluptate consequuntur quo sint cupiditate. Excepturi harum reprehenderit totam quaerat ad aut consequuntur amet ipsum? Eos vitae ullam dolore, asperiores tempora rem ea quaerat maxime, exercitationem eligendi odio deserunt pariatur veniam incidunt quod dignissimos quae maiores. Incidunt nemo odio quam ab suscipit, deserunt quidem, dolor commodi sunt expedita temporibus molestiae dolores?
 
     div(class=["container-textImage", "container-textImage--right"])
-      div
+      div.container-info
         h2 I love my job 
         p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore consectetur quae placeat, deserunt libero adipisci nostrum! Odit, explicabo consequuntur? Inventore, rerum ipsum eius neque dolorum eum tenetur, exercitationem praesentium commodi obcaecati, ipsam et asperiores doloremque.   
-      figure 
+      figure.container-img 
         img(src="assets/img/mia-photo-3.jpg" alt="Mia Olivera")
 
   section 
@@ -59,7 +59,8 @@ block content
         p(class=["negative-text", "contact-text"]) Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum quod, consequuntur repellendus expedita, illum debitis minima, adipisci odio accusantium at obcaecati saepe unde dolore! Nobis voluptatem facilis, autem odio vel obcaecati nostrum recusandae veritatis magni inventore accusantium, distinctio eius tenetur.
       div
         a(href="/contact")
-          img(src="assets/img/icons/flechas.svg", alt="flechas", class="contact-img")
+          figure.contact-link
+            img(src="assets/img/icons/flechas.svg", alt="flechas", class="contact-img")
 
 block scripts
   script(src="js/posts.js") 

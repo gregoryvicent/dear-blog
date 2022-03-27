@@ -1,12 +1,13 @@
 :root {
   --main-color: #f5f5f5;
   --two-color: #1C0A00;
+  --three-color: rgb(219, 38, 38);
   --font-family: 'Lobster', cursive;
 }
 
 ::-webkit-scrollbar{
     width: 10px;
-    background-color: var(--main-color);
+    background-color: var(--three-color);
 }
 ::-webkit-scrollbar-track{
     border-radius: 10px;
@@ -14,7 +15,7 @@
     background-color: var(--main-color);
 }
 ::-webkit-scrollbar-thumb{
-    background-color: var(--two-color); 
+    background-color: var(--three-color); 
     border-radius: 10px;
     background-image: -webkit-linear-gradient(90deg,rgba(255, 255, 255, .2) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,transparent 75%,transparent)
 }
@@ -28,7 +29,8 @@
 
 a {
   text-decoration: none;
-  color: var(--two-color);
+  color: var(--three-color);
+  font-weight: 500;
   transition: all .5s ease;
 }
 
@@ -122,6 +124,7 @@ section {
 
 .negative-box {
   background-color: var(--two-color);
+  padding: 1rem;
 }
 
 .negative-text {
@@ -141,6 +144,10 @@ section {
 }
 
 /* Header */
+
+.Header--desktop {
+  height: 100%;
+}
 
 .Header-perfileContainer {
   background-color: var(--two-color);
@@ -166,8 +173,10 @@ section {
 }
 
 .Header-perfilPhoto {
+  margin: 0 0;
   width: 50%;
   border-radius: 50%;
+  transition: all .5s ease;
 }
 
 .Header-name {
@@ -182,6 +191,10 @@ section {
   flex-direction: column;
   justify-content: center;
   height: 53%;
+}
+
+.Header-list {
+  list-style: none;
 }
 
 .Header-item {
@@ -269,6 +282,14 @@ section {
   transition: all .5s ease;
 }
 
+.contact-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .contact-img:hover {
   background-color: var(--main-color);
   border-radius: 50%;
@@ -312,4 +333,76 @@ section {
   margin: auto;
   color: var(--main-color);
   padding: 1rem;
+}
+
+/* Media Query */
+
+@media(max-width: 1200px) {
+  /* General */
+
+  figure {
+    width: 50%;
+    justify-self: center;
+  }
+
+  figure > img:not(.post-Img) {
+    border-radius: 15px;
+    margin: 1rem 0;
+  }
+
+  /* Home Section */
+
+  .container-textImage {
+    grid-template-areas:
+     "info"
+     "img"
+    ;
+  }
+
+  .container-info {
+    grid-area: info;
+  }
+
+  .container-img {
+    grid-area: img;
+  }
+  .container-textImage--left, 
+  .container-textImage--right {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-img {
+    width: 30%;
+  }
+
+  /* Contact Section */
+
+  .contact-boxInfo {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 1000px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap:25px;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+  } 
+
+  header {
+    position: relative;
+    height: auto;
+    width: auto;
+    box-shadow: 10px 10px 25px var(--two-color);
+  }
+
+  .Header--desktop {
+    display: none;
+  }
 }
