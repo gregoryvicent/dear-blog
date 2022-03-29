@@ -1,5 +1,5 @@
 const express = require("express")
-const morgan = require("morgan")
+// const morgan = require("morgan")
 const pug = require("pug")
 
 const router = require("./router/router")
@@ -12,7 +12,7 @@ app
   .set("view engine", "pug")
 
 app
-  .use(morgan("dev"))
+  // .use(morgan("dev"))
   .use(express.static(statics))
   .use(router)
 
