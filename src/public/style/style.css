@@ -71,6 +71,7 @@ h3 {
 header {
   position: fixed;
   height: 100vh;
+  z-index: 900;
   width: 30%;
   box-shadow: 10px 10px 25px var(--two-color);
 }
@@ -214,6 +215,60 @@ section {
   font-size: 3rem;
 }
 
+.Header--mobile {
+  background-color: var(--two-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: .5rem 1rem;
+}
+
+.Header--mobile-title {
+  color: var(--main-color);
+  font-size: 2rem;
+}
+
+.Header--mobile-menuBox {
+  width: 100%;
+  height: 90vh;
+  background-color: var(--main-color);
+  transform: translate(0, 100%);
+  transition: all .5s ease;
+}
+
+.Header--mobile-menuBox--isActive {
+  transform: translate(0, 0%);
+}
+
+.Header--mobile-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.Header--mobile-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.Header--mobile-item {
+  margin: 3rem 0;
+}
+
+.Header--mobile-link {
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 4rem;
+  color: var(--two-color);
+}
+
 /* Post */
 
 .post {
@@ -234,7 +289,7 @@ section {
   padding: 1rem;
   font-size: 1rem;
   font-weight: 400;
-  z-index: 999;
+  z-index: 800;
   color: var(--main-color);
   transition: all .5s linear;
   overflow-y: auto;
@@ -300,6 +355,11 @@ section {
   align-self: center;
 }
 
+.contact-icon {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
 /* Contact Section */ 
 
 .contact-boxInfo {
@@ -318,11 +378,6 @@ section {
 
 .contact-list {
   padding: 1.5rem;
-}
-
-.contact-icon {
-  width: 10px;
-  background-color: #f5f5f5;
 }
 
 /* Footer */
@@ -388,18 +443,25 @@ section {
 
 @media(max-width: 1000px) {
   body {
-    display: grid;
     grid-template-columns: 1fr;
-    column-gap:25px;
-    font-family: 'Raleway', sans-serif;
-    overflow-x: hidden;
+    column-gap: 0px;
   } 
 
+  footer {
+    grid-column-start: 1;
+  }
+
   header {
-    position: relative;
-    height: auto;
-    width: auto;
-    box-shadow: 10px 10px 25px var(--two-color);
+    position: fixed;
+    width: 100%;
+    height: 5vh;
+    box-shadow: 5px 5px 15px var(--two-color);
+  }
+
+  main {
+    grid-column-start: 1;
+    margin-top: 5vh;
+    padding: 2.5rem;
   }
 
   .Header--desktop {

@@ -14,4 +14,19 @@ header
           a(href="/blog", class="Header-link") Blog
         li.Header-item 
           a(href="/contact", class="Header-link") Contact
-    
+
+  div.Header--mobile
+    a(href="/")
+      h3.Header--mobile-title Dear Blog
+    button(id="hamburger" class=["hamburger", "hamburger--collapse"] type="button")
+      span(class="hamburger-box")
+        span(class="hamburger-inner")
+  div.Header--mobile-menuBox
+    nav.Header--mobile-nav
+      ul.Header--mobile-list 
+        li.Header--mobile-item 
+          a(href="/", class="Header--mobile-link") Home
+        li.Header--mobile-item 
+          a(href="/blog", class="Header--mobile-link") Blog
+        li.Header--mobile-item     
+          a(href="/contact", class="Header--mobile-link") Contact
