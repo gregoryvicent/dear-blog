@@ -27,4 +27,13 @@ img {
   h1 {
     font-size: 3rem;
   }
+
+  p {
+    font-size: 0.90rem;
+  }
+
+  img {
+    margin: 1rem auto;
+    width: 100%;
+  }
 }

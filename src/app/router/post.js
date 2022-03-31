@@ -10,20 +10,26 @@ function post(req, res, next) {
   const posts = getPost.getDataPosts()
 
   let page = "pages/notFound"
+  let title = ""
 
   posts.forEach((element) => {
     if (element.file === req.params.post) {
       page = "pages/post"
+      title = element.data.title
       pugContent = html2pug(converter.makeHtml(element.content), {fragment: true})
 
       fs.writeFileSync(__dirname.replace("app/router", "public/views/pages/postContent.pug"), pugContent)
     }
   })
 
-  res.render(page)
+  res.render(page, {title: title})
   res.end()
 
   next()
 }
+
+const newPost = new GetPosts()
+
+console.log(newPost.getDataPosts())
 
 module.exports = post

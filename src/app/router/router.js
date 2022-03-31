@@ -10,5 +10,6 @@ router
   .get("/blog", (req, res, next) => blog(res, next))
   .get("/contact", (req, res, next) => contact(res, next))
   .get("/posts/:post", (req, res, next) => post(req, res, next))
+  
 
 module.exports = router
