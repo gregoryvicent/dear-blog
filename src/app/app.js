@@ -5,7 +5,7 @@ const pug = require("pug")
 const router = require("./router/router")
 
 const app = express()
-const statics = __dirname.replace("app", "public")
+const statics = __dirname.replace(/app$/, "public")
 
 console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++")
 console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++")
