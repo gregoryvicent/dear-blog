@@ -7,6 +7,12 @@ const router = require("./router/router")
 const app = express()
 const statics = __dirname.replace("app", "public")
 
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++")
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++")
+console.log(statics)
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++")
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++")
+
 app
   .set("views", "./src/public/views")
   .set("view engine", "pug")
